@@ -1,0 +1,57 @@
+html {
+    &, body {
+        &, div#root {
+            &, div.App {
+                &, .dashboard {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+html {
+    body {
+        div#root {
+            div.App {
+                .dashboard {
+                    position: relative;
+                    display: flex;
+
+                    .dashboard_main {
+                        align-content: center;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        padding: 20px 40px;
+                        width: 65%;
+
+                        .dashboard_main-header {
+                            flex: auto;
+                        }
+
+                        .dashboard_main-gallery {
+                            width: 100%;
+                        }
+                    }
+
+                    .dashboard_aside {
+                        padding: 20px;
+                        width: 35%;
+                        overflow: scroll;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .uk-card {
+                            padding: 0 20px;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
